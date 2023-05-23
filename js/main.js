@@ -1,4 +1,6 @@
+const my_mapbox_key = 'pk.eyJ1IjoibWluaG5ndXllbjg5ODkiLCJhIjoiY2xpMHQzMjV0MWhxcDNscDA1b2NndjlwbSJ9.ZuILG_e1JTPgAmnGmMqn6Q';
 
+const my_weather_key = '9025a2d6622b68c5fc89a00b436f5355';
 
 // Auto run newLocation function when first Load
 document.addEventListener('DOMContentLoaded', function (){
