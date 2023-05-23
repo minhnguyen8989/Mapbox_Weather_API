@@ -187,6 +187,15 @@ function newLocation() {
             addWeather5 += "<img src=\"http://openweathermap.org/img/w/" + weatherStatus.list[31].weather[0].icon + ".png\" alt=\"\"/>"
             $("#day5Weather").html(addWeather5)
         })
+
+        // Add Fact info
+        $.get(myWeatherAPI).done(function (factInfo){
+            const population = factInfo.city.population;
+            const city = factInfo.city.name;
+            let addFact = '';
+            addFact += "<p><strong>" + city +"</strong> has a population of approximately <strong>" + population.toLocaleString() + "</strong> people.</p>"
+            $("#description").html(addFact)
+        })
     })
 }
 
