@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/5eb820a637.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5eb820a637.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -16,80 +17,74 @@
         <source src="video/Weather.mp4" type="video/mp4">
     </video>
 </div>
-<!--Search Bar-->
-<div class="input-group mb-3" style="width: 70%">
-    <div class="input-group-prepend">
-        <button class="btn btn-outline-secondary" type="button">Search <i class="fa-solid fa-location-dot fa-bounce" style="color: #4ca3a9;"></i></button>
-    </div>
-    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-</div>
+
 <!-- content -->
-<div class="container">
+<div class="container d-flex flex-column">
+<!--    Map Box -->
+    <div>
+        <h4>Current Location: <span id="currentLocation"></span></h4>
+        <h4>Date: <span id="currentDate"></span></h4>
+    </div>
+    <div id="mapBox" style="width: 100%; height: 500px; border: 1px solid blue"></div>
+    <!--Search Bar-->
+    <div class="input-group mb-3" style="width: 70%">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="button">Search <i class="fa-solid fa-location-dot fa-bounce" style="color: #4ca3a9;"></i></button>
+        </div>
+        <label for="searchBox"></label>
+        <input id="searchBox" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+    </div>
+<!--    Weather Card-->
     <div class="card">
         <div class="row">
             <div class="col-9 left">
                 <div class="row top">
-                    <div class="col">Moscow</div>
-                    <div class="col">18.01.2020</div>
-                    <div class="col">Rain map</div>
+                    <div class="col" id="city"></div>
+                    <div class="col" id="status"></div>
                 </div>
                 <div class="row">
-                    <div class="col-7 temp">-4&deg;</div>
-                    <div class="col-5 time"><p>11:00</p><h2><b>Saturday</b></h2><p>Cloudy</p></div>
+                    <div class="col-7 temp" id="temp"></div>
+                    <div class="col-5 time">
+                        <p id="fullDate"></p>
+                        <h2 id="todayDate"><b></b></h2>
+                        <p id="weather"></p>
+                    </div>
                 </div>
                 <div class="row bottom">
                     <div class="col"><hr></div>
                     <div class="col border">
-                        <div class="row">Sab</div>
-                        <div class="row"><b>-4&deg;</b></div>
+                        <div class="row" id="day2Date"></div>
+                        <div class="row" id="day2Weather"><b></b></div>
                     </div>
                     <div class="col">
-                        <div class="row">Sun</div>
-                        <div class="row"><b>-4&deg;</b></div>
+                        <div class="row" id="day3Date"></div>
+                        <div class="row" id="day3Weather"><b></b></div>
                     </div>
                     <div class="col">
-                        <div class="row">Mon</div>
-                        <div class="row"><b>-5&deg;</b></div>
+                        <div class="row" id="day4Date"></div>
+                        <div class="row" id="day4Weather"><b></b></div>
                     </div>
                     <div class="col">
-                        <div class="row">Tue</div>
-                        <div class="row"><b>-10&deg;</b></div>
-                    </div>
-                    <div class="col">
-                        <div class="row">Wed</div>
-                        <div class="row"><b>-4&deg;</b></div>
-                    </div>
-                    <div class="col">
-                        <div class="row">Thu</div>
-                        <div class="row"><b>-2&deg;</b></div>
-                    </div>
-                    <div class="col">
-                        <div class="row">Fri</div>
-                        <div class="row"><b>0&deg;</b></div>
+                        <div class="row" id="day5Date"></div>
+                        <div class="row" id="day5Weather"><b></b></div>
                     </div>
                     <div class="col"><hr></div>
                 </div>
             </div>
             <div class="col-3 right">
-                <div class="row top">For a month</div>
+                <div class="row top"><h5>Project Owner</h5></div>
                 <div class="timely">
-                    <div class="row">11:00 &nbsp; <b>-4&deg;</b></div>
-                    <div class="row">12:00 &nbsp; <b>-4&deg;</b></div>
-                    <div class="row">13:00 &nbsp; <b>-5&deg;</b></div>
-                    <div class="row">14:00 &nbsp; <b>-7&deg;</b></div>
-                    <div class="row">15:00 &nbsp; <b>-4&deg;</b></div>
-                    <div class="row">16:00 &nbsp; <b>-4&deg;</b></div>
+                    <h1>hello</h1>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-
-
-
+<!--Script-->
 <script src="js/keys.js"></script>
 <script src="js/mapbox-geocode-utils.js"></script>
+<script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
