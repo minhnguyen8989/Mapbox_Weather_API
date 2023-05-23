@@ -1,0 +1,3 @@
+const my_mapbox_key = 'pk.eyJ1IjoibWluaG5ndXllbjg5ODkiLCJhIjoiY2xpMGZlMGVwMWU4dDNxb2lsd21xOXlsaiJ9.7pVdP05RLGgHloIsUaju2g';
+
+const my_weather_key = '9025a2d6622b68c5fc89a00b436f5355';
