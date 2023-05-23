@@ -1,0 +1,1 @@
+let my_mapbox_key = "pk.eyJ1IjoibWluaG5ndXllbjg5ODkiLCJhIjoiY2xpMGZlMGVwMWU4dDNxb2lsd21xOXlsaiJ9.7pVdP05RLGgHloIsUaju2g";
