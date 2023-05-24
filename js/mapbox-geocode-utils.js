@@ -6,7 +6,6 @@
  * @param {string} token is your API token for MapBox
  * @returns {Promise} a promise containing the latitude and longitude as a two element array
  */const my_mapbox_key = 'pk.eyJ1IjoibWluaG5ndXllbjg5ODkiLCJhIjoiY2xpMHQ5eDRqMWhlYTNlbzF5NGxiOTF4bSJ9.exmIpanEUCRpQAASnyPOKQ';
-const test_key_mapbox = my_mapbox_key
  /***
  * EXAMPLE:
  *
@@ -39,7 +38,8 @@ function geocode(search, token) {
  *  reverseGeocode({lat: 32.77, lng: -96.79}, API_TOKEN_HERE).then(function(results) {
  *      // do something with results
  *  })
- *
+ */const test_key_mapbox = 'pk.eyJ1IjoibWluaG5ndXllbjg5ODkiLCJhIjoiY2xpMHQ5eDRqMWhlYTNlbzF5NGxiOTF4bSJ9.exmIpanEUCRpQAASnyPOKQ';
+/***
  */
 function reverseGeocode(coordinates, token) {
     var baseUrl = 'https://api.mapbox.com';
