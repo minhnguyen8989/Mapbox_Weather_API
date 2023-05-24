@@ -199,7 +199,4 @@ function newLocation() {
     })
 }
 
-// Search Button
-let SearchButton = document.getElementById("searchButton");
-SearchButton.addEventListener("click", newLocation);
 
